@@ -100,9 +100,6 @@ If you need to change where outputs are saved or want to restructure the project
 
 With this tool, managing and transforming your audio datasets becomes a breeze! Dive in, tweak the settings, and let the code work its magic. Happy processing! 🎧
 
-```
-
-
 
 ---
 ---
@@ -121,5 +118,3 @@ Dive into the code, unleash your creativity, and let your sound waves resonate w
 
 ---
 ---
-
-```
