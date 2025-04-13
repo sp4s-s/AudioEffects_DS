@@ -1,0 +1,209 @@
+{
+    "ds/ch.wav": {
+        "Index": 0,
+        "File": "ds/ch.wav",
+        "Effects Applied": [
+            "noise",
+            "time_stretch"
+        ],
+        "Chunk Time Stamps (samples)": {
+            "0": [
+                48021,
+                284217
+            ],
+            "1": [
+                169281,
+                398818
+            ],
+            "2": [
+                253524,
+                547556
+            ],
+            "3": [
+                306846,
+                639334
+            ],
+            "4": [
+                163591,
+                352944
+            ]
+        },
+        "Chunk Paths": [
+            {
+                "0": "chunks/ch_chunk0_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch_chunk1_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch_chunk2_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch_chunk3_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch_chunk4_chunk_0.wav"
+            }
+        ],
+        "Effect File Outputs": [
+            [
+                "chunks/ch_chunk0_noise_0.wav",
+                "chunks/ch_chunk0_time_stretch_1.wav"
+            ],
+            [
+                "chunks/ch_chunk1_noise_0.wav",
+                "chunks/ch_chunk1_time_stretch_1.wav"
+            ],
+            [
+                "chunks/ch_chunk2_noise_0.wav",
+                "chunks/ch_chunk2_time_stretch_1.wav"
+            ],
+            [
+                "chunks/ch_chunk3_noise_0.wav",
+                "chunks/ch_chunk3_time_stretch_1.wav"
+            ],
+            [
+                "chunks/ch_chunk4_noise_0.wav",
+                "chunks/ch_chunk4_time_stretch_1.wav"
+            ]
+        ]
+    },
+    "ds/ch copy.wav": {
+        "Index": 1,
+        "File": "ds/ch copy.wav",
+        "Effects Applied": [
+            "time_stretch",
+            "pitchify",
+            "noise"
+        ],
+        "Chunk Time Stamps (samples)": {
+            "0": [
+                311367,
+                592155
+            ],
+            "1": [
+                33925,
+                375834
+            ],
+            "2": [
+                98277,
+                392088
+            ],
+            "3": [
+                21121,
+                435451
+            ],
+            "4": [
+                190642,
+                557727
+            ]
+        },
+        "Chunk Paths": [
+            {
+                "0": "chunks/ch copy_chunk0_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch copy_chunk1_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch copy_chunk2_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch copy_chunk3_chunk_0.wav"
+            },
+            {
+                "0": "chunks/ch copy_chunk4_chunk_0.wav"
+            }
+        ],
+        "Effect File Outputs": [
+            [
+                "chunks/ch copy_chunk0_time_stretch_0.wav",
+                "chunks/ch copy_chunk0_pitchify_1.wav",
+                "chunks/ch copy_chunk0_noise_2.wav"
+            ],
+            [
+                "chunks/ch copy_chunk1_time_stretch_0.wav",
+                "chunks/ch copy_chunk1_pitchify_1.wav",
+                "chunks/ch copy_chunk1_noise_2.wav"
+            ],
+            [
+                "chunks/ch copy_chunk2_time_stretch_0.wav",
+                "chunks/ch copy_chunk2_pitchify_1.wav",
+                "chunks/ch copy_chunk2_noise_2.wav"
+            ],
+            [
+                "chunks/ch copy_chunk3_time_stretch_0.wav",
+                "chunks/ch copy_chunk3_pitchify_1.wav",
+                "chunks/ch copy_chunk3_noise_2.wav"
+            ],
+            [
+                "chunks/ch copy_chunk4_time_stretch_0.wav",
+                "chunks/ch copy_chunk4_pitchify_1.wav",
+                "chunks/ch copy_chunk4_noise_2.wav"
+            ]
+        ]
+    },
+    "ds/pink.mp3": {
+        "Index": 2,
+        "File": "ds/pink.mp3",
+        "Effects Applied": [
+            "noise"
+        ],
+        "Chunk Time Stamps (samples)": {
+            "0": [
+                3752747,
+                4134918
+            ],
+            "1": [
+                8466357,
+                8855110
+            ],
+            "2": [
+                6205490,
+                6425622
+            ],
+            "3": [
+                2756904,
+                3109638
+            ],
+            "4": [
+                7817291,
+                8172326
+            ]
+        },
+        "Chunk Paths": [
+            {
+                "0": "chunks/pink_chunk0_chunk_0.wav"
+            },
+            {
+                "0": "chunks/pink_chunk1_chunk_0.wav"
+            },
+            {
+                "0": "chunks/pink_chunk2_chunk_0.wav"
+            },
+            {
+                "0": "chunks/pink_chunk3_chunk_0.wav"
+            },
+            {
+                "0": "chunks/pink_chunk4_chunk_0.wav"
+            }
+        ],
+        "Effect File Outputs": [
+            [
+                "chunks/pink_chunk0_noise_0.wav"
+            ],
+            [
+                "chunks/pink_chunk1_noise_0.wav"
+            ],
+            [
+                "chunks/pink_chunk2_noise_0.wav"
+            ],
+            [
+                "chunks/pink_chunk3_noise_0.wav"
+            ],
+            [
+                "chunks/pink_chunk4_noise_0.wav"
+            ]
+        ]
+    }
+}
