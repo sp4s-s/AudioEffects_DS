@@ -102,6 +102,9 @@ With this tool, managing and transforming your audio datasets becomes a breeze! 
 
 ```
 
+
+
+---
 ---
 
 ## Wrapping Up 🎉
@@ -114,3 +117,9 @@ You've now got a powerful, customizable toolbox at your fingertips. Whether you'
 This processor isn't just about splitting and augmenting audio files—it's a platform to experiment, learn, and turn your raw sounds into impactful insights. Tinker with the source, extend its functionality by adding new effects, or even tweak the directory structure to suit your workflow. Remember, the only limit is your imagination!
 
 Dive into the code, unleash your creativity, and let your sound waves resonate with brilliance. Happy coding, and may every waveform bring you closer to perfection! 🎵
+
+
+---
+---
+
+```
