@@ -8,7 +8,7 @@
 The Audio Dataset Processor is a modular Python package designed to transform your audio files into smaller chunks, apply a set of audio effects (pitch shift, time stretch, and noise addition), and generate comprehensive metadata in JSON and CSV formats. Whether you are a data scientist, sound engineer, or audio enthusiast, this pipeline offers a flexible solution to pre-process your audio datasets with minimal effort. 
 
 > “Supports `.wav`, `.mp3`, and `.flac` formats. Default sampling rate is preserved from original files.”
-- [ Can Supoort other formats though ]
+- [ Can Supoort other formats/rates though ]
 
 ## Folder Structure Diagram
 The project is organized as follows:
