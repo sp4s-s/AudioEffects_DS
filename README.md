@@ -1,8 +1,8 @@
-
+# Audio Dataset Processor 🎶
 ---
 
 ```markdown
-# Audio Dataset Processor 🎶
+librosa based cli
 
 ## Overview
 The Audio Dataset Processor is a modular Python package designed to transform your audio files into smaller chunks, apply a set of audio effects (pitch shift, time stretch, and noise addition), and generate comprehensive metadata in JSON and CSV formats. Whether you are a data scientist, sound engineer, or audio enthusiast, this pipeline offers a flexible solution to pre-process your audio datasets with minimal effort. 
@@ -47,6 +47,10 @@ To run the processor, open your terminal and execute:
 
 ```bash
 python main.py --dirname <path-to-audio-dir>
+```
+~help~
+```bash
+python main.py --help
 ```
 
 Replace `<path-to-audio-dir>` with the directory where your audio files reside. The processor will:
