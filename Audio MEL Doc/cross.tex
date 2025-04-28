@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{background}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\title{Determining Time Shift Between Two Signals Using Cross-Correlation}
+\author{Shubhankar Mahanta}
+\date{28-03-2025}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codeblue}{rgb}{0,0,1}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{codeblue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codegreen},
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,                
+	breakatwhitespace=false,       
+	frame=leftline,
+    framexleftmargin=0pt,
+	xleftmargin=0em,
+	xrightmargin=2em, 
+	showstringspaces=false,
+	numbers=left, 
+	numbersep=1em,
+}
+
+\lstset{style=mystyle}
+
+
+\pagestyle{fancy}
+\fancyhf{} % Clear headers and footers
+\fancyfoot[L]{\textcolor{black}{\small \href{https://spass.uk}{Visit my website}}} 
+
+
+
+\begin{document}
+	
+	\maketitle
+	
+	\backgroundsetup{
+		position=current page.south west,
+		angle=90,
+		nodeanchor=south west,
+		vshift=-13mm, 
+		hshift=105mm,
+		opacity=0.5, 
+		scale=0.7, 
+		color=black!50, 
+		contents={\textbf{\Huge sp4s-s}}
+	}
+	
+	\begin{abstract}
+		Analyzing the shift between two signals with similar wave patterns presents challenges in accurately determining time delays. Traditional methods, such as visually dragging one wave over another for overlap inspection, are inefficient and prone to human error. These approaches fail to provide precise alignment, especially in cases where damping, noise, or phase shifts are involved. A more reliable alternative is mathematical cross-correlation, which quantifies the time shift by computing the similarity between original and shifted waveforms, offering a robust and automated solution to signal alignment issues.
+	\end{abstract}
+	
+	
+	\section*{Steps to Find the Shift}
+	
+	To determine the time shift between an original wave and a damped, shifted wave, follow these steps:
+	
+	\begin{enumerate}
+		\item Compute the cross-correlation of the two signals.
+		\item Identify the lag at which the cross-correlation is maximum.
+		\item The corresponding lag value indicates the time shift of the second wave relative to the first.
+	\end{enumerate}
+	
+	\section*{Mathematical Approach}
+	
+	Let:
+	\begin{itemize}
+		\item \( x(t) \) represent the original wave.
+		\item \( y(t) \) represent the damped and shifted wave.
+	\end{itemize}
+	
+	The cross-correlation function is defined as:
+	
+	\[
+	R_{xy}(\tau) = \int_{-\infty}^{\infty} x(t) \cdot y(t + \tau) \ dt
+	\]
+	
+	The peak of \( R_{xy}(\tau) \) occurs at \( \tau = \tau_{\text{max}} \), which provides the best alignment between \( x(t) \) and \( y(t) \), thereby revealing the time shift.
+	
+	
+	\newpage
+	
+	\section*{Python Implementation}
+	
+	The following Python code demonstrates how to compute the time shift between two signals using the cross-correlation method:
+	
+\vspace{10pt}
+	\begin{lstlisting}[language=Python, caption=Compute time shift using cross-correlation]
+		
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+# Parameters
+sampling_rate = 1000  # Hz
+duration = 2.0        # seconds
+frequency = 5.0       # Hz
+true_shift = 0.5      # seconds
+damping_factor = 0.1  # Damping coefficient
+
+# Time vector
+t = np.arange(0, duration, 1/sampling_rate)
+
+
+# Original wave: Sine wave
+original_wave = np.sin(2 * np.pi * frequency * t)
+
+# Damped and shifted wave
+damped_wave = np.exp(-damping_factor * t) * np.sin(2 * np.pi * frequency * (t - true_shift))
+
+
+# Compute cross-correlation
+correlation = np.correlate(original_wave, damped_wave, mode='full')
+lags = np.arange(-len(original_wave) + 1, len(original_wave))
+
+
+
+# Find the lag with the maximum correlation
+max_corr_index = np.argmax(correlation)
+time_shift = lags[max_corr_index] / sampling_rate
+
+
+# Final Result
+print(f"Estimated time shift: {time_shift:.4f} seconds")
+
+#
+#
+#
+  
+  
+ 
+\end{lstlisting}
+
+\newpage
+\vspace{10pt}
+
+\begin{lstlisting}[language=Python, caption=Plotting for Visualization of Results]
+	
+	
+# Plotting
+plt.figure(figsize=(12, 6))
+
+# Plot original and damped waves
+plt.subplot(2, 1, 1)
+plt.plot(t, original_wave, label='Original Wave')
+plt.plot(t, damped_wave, label='Damped & Shifted Wave')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.title('Original and Damped Waves')
+
+
+# Plot cross-correlation
+plt.subplot(2, 1, 2)
+plt.plot(lags / sampling_rate, correlation)
+plt.axvline(time_shift, color='r', linestyle='--', label=f'Estimated Shift = {time_shift:.4f} s')
+plt.xlabel('Lag (s)')
+plt.ylabel('Cross-Correlation')
+plt.legend()
+plt.title('Cross-Correlation Function')
+
+plt.tight_layout()
+plt.show()
+     																										##
+     																										##
+     																										##
+		
+\end{lstlisting}
+	
+\end{document}
